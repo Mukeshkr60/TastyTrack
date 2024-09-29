@@ -1,0 +1,97 @@
+/* Container for the explore menu */
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Slightly larger gap for better spacing */
+  margin-top: 3%; /* Adjust top margin for better alignment */
+  padding: 0 20px; /* Add padding for better mobile experience */
+}
+
+/* Title styling */
+.explore-menu h1 {
+  color: #262626;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font size */
+}
+
+/* Description text styling */
+.explore-menu-text {
+  max-width: 100%;
+  color: #808080; /* Ensure columns color is correctly applied */
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive text size */
+}
+
+/* Horizontal menu list */
+.explore-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Menu list items styling */
+.explore-menu-list-item {
+  text-align: center;
+  scroll-snap-align: center; /* Snap items to center */
+}
+
+/* Image styling */
+.explore-menu-list-item img {
+  margin-top: 8%;
+  width: 7.5vw;
+  min-width: 70px;
+  max-width: 110px;
+  gap: 15px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: 5%;
+  margin-right: 20px;
+}
+
+/* Hover effect for images */
+.explore-menu-list-item img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0px 4px 15px rgba(6, 204, 239, 0.15); /* Soft shadow */
+}
+
+/* Text for the menu items */
+.explore-menu-list-item p {
+  margin-top: 10px;
+  color: #023505;
+  font-size: clamp(1.1rem, 1.5vw, 16px); /* Responsive font size */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.explore-menu-list-item p:hover {
+  color: #262626;
+}
+
+/* Horizontal rule styling */
+.explore-menu hr {
+  margin: 10px 0;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+/* Active state for selected items */
+.explore-menu-list-item .active {
+  border: 3px solid rgb(4, 98, 27);
+  padding: 2px;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.6); /* Tomato-colored shadow */
+  transition: box-shadow 0.3s ease;
+}

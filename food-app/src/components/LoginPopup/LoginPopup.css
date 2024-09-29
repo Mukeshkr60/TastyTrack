@@ -1,0 +1,145 @@
+/* General styling for the popup */
+.login-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5);  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .login-popup-controller {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+    text-align: center;
+    animation: fadeIn 0.5s ease; /* Smooth pop-up effect */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title section */
+  .login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-popup-title h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .login-popup-title img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  /* Input fields */
+  .login-popup-inputs input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-popup-inputs input:focus {
+    border-color: #af3c2f; /* Highlight color */
+    outline: none;
+  }
+  
+  /* Button styles */
+  #btn{
+    width: 100%;
+    padding: 12px;
+    background-color: #af3c2f;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+  } 
+  
+  /* Terms and conditions */
+  .login-popup-condition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .login-popup-condition input {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Links to switch between login and sign-up */
+  .login-popup p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .login-popup p span {
+    color: #af3c2f;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .login-popup p span:hover {
+    color: #c0392b;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .login-popup-controller {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .login-popup-title h2 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      font-size: 1rem;
+    }
+  
+    .login-popup-inputs input {
+      padding: 10px 12px;
+    }
+  }
+  
